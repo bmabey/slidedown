@@ -104,9 +104,26 @@
 
 !SLIDE
 
-@@@ html+erb
+@@@ rhtml
     <h1>A test</h1>
     <p>
       <%= @foo.bar(:fizz => 'buzz') %>
     </p>
+@@@
+
+!SLIDE
+
+# A Cucumber test...
+
+!SLIDE
+
+@@@ cucumber
+    Feature: Gherkin Syntax Highlighting
+
+    Scenario: Pretty Colors
+      Given I have installed the Cucumber Pygments Lexer by Ben Mabey
+      # http://github.com/bmabey/cucumber-pygments-lexer/tree/master
+      And I have indented my feature properly to account for slidedown
+      When I run slidedown on this slide
+      Then I should see pretty syntax highling on my gherkin
 @@@
